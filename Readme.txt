@@ -1,47 +1,21 @@
 # 🧪 Software QA Tester Internship
 
-Welcome to my **Software QA Tester Internship** repository! 👋
+This repository contains my **assignments, test cases, bug reports, testing tasks, and practical work** completed during my **Software QA Tester Internship**.
 
-This repository contains my **assignments, testing tasks, test cases, bug reports, and practical work** completed during my internship.
-
-The main purpose of this repository is to document and submit my internship work while gaining practical experience in **Software Quality Assurance (QA) and Software Testing**.
+> 🎯 **Purpose:** Internship assignment submission and practical learning in Software Quality Assurance and Testing.
 
 ---
 
-## 🎯 About the Internship
+## 🚀 What I’m Learning
 
-During this internship, I am working on practical QA tasks to understand how software applications are:
-
-* 🔍 Tested and validated
-* 🐞 Analyzed for defects
-* 📋 Documented through test cases and reports
-* ⚙️ Evaluated against requirements
-* 🚀 Improved before release
-
-The assignments focus on applying **software testing concepts to real-world scenarios** and developing practical skills in identifying, documenting, and verifying software defects.
-
----
-
-## 🧠 Skills & Concepts
-
-* 🧪 Software Testing Fundamentals
-* 🖐️ Manual Testing
+* 🧪 Manual Testing
 * 📝 Test Case Design
 * 📋 Test Scenario Creation
-* ⚙️ Functional Testing
-* 📊 Non-Functional Testing
-* 🚦 Smoke Testing
-* 🔄 Sanity Testing
-* 🔁 Regression Testing
-* 🔎 Exploratory Testing
-* ✅ Positive & Negative Testing
-* 📐 Boundary Value Analysis
-* 🧩 Equivalence Partitioning
-* 🐞 Bug Identification
-* 📝 Bug Reporting
-* 📑 Requirement Analysis
-* ▶️ Test Execution
-* 📚 QA Documentation
+* 🐞 Bug Identification & Reporting
+* 🔄 Regression Testing
+* 🚦 Smoke & Sanity Testing
+* 🔍 Functional Testing
+* 🌐 Web Application Testing
 * 🔗 Basic API Testing
 * 🤖 Basic Automation Testing
 
@@ -49,55 +23,72 @@ The assignments focus on applying **software testing concepts to real-world scen
 
 ## 🛠️ Tools & Technologies
 
-| Tool / Technology            | Purpose                                 |
-| ---------------------------- | --------------------------------------- |
-| 🐞 **Jira**                  | Bug & Issue Tracking                    |
-| 🔗 **Postman**               | API Testing                             |
-| 🤖 **Selenium**              | Web Automation Testing                  |
-| 🌐 **Chrome DevTools**       | Web Debugging & Testing                 |
-| 🐙 **Git & GitHub**          | Version Control & Assignment Submission |
-| 📊 **Excel / Google Sheets** | Test Case & Test Report Documentation   |
-| 🗄️ **SQL**                  | Basic Database Testing                  |
+* 🐞 **Jira** — Bug Tracking
+* 🔗 **Postman** — API Testing
+* 🤖 **Selenium** — Automation Testing
+* 🌐 **Chrome DevTools** — Web Testing & Debugging
+* 🐙 **Git & GitHub** — Version Control
+* 📊 **Excel / Google Sheets** — Test Documentation
+* 🗄️ **SQL** — Database Testing
 
 ---
 
-## 📂 Repository Purpose
+## 🧪 Testing Workflow
 
-This repository is maintained to:
-
-* 📌 Submit internship assignments
-* 🧪 Practice software testing concepts
-* 📝 Create and document test cases
-* 📋 Design test scenarios
-* 🐞 Identify and report software defects
-* 🔍 Analyze and verify reported issues
-* 📚 Maintain QA documentation
-* 📈 Track my learning and progress
-* 💼 Build practical Software QA experience
+```text
+Requirements
+     │
+     ▼
+Test Scenarios
+     │
+     ▼
+Test Cases
+     │
+     ▼
+Test Execution
+     │
+     ▼
+Pass / Fail
+     │
+     ▼
+Bug Reporting
+     │
+     ▼
+Retesting & Regression
+```
 
 ---
 
-## 🚀 Internship Status
+## 📂 Repository Contents
 
-**Status:** 🟢 Ongoing
+This repository may include:
 
-New **assignments, test cases, bug reports, test reports, and other practical work** will be added to this repository as the internship progresses.
+* 📋 Test Cases
+* 🐞 Bug Reports
+* 🧪 Testing Assignments
+* 📊 Test Reports
+* 📸 Screenshots & Evidence
+* 🔗 API Testing Tasks
+* 🤖 Automation Tasks
+
+---
+
+## 📈 Internship Status
+
+🟢 **Ongoing**
+
+New assignments and practical testing work will be added throughout the internship.
 
 ---
 
 ## 👨‍💻 Author
 
-### **Soumya Kanti Hazra**
+**Soumya Kanti Hazra**
 
 🎓 Computer Science & Engineering Student
 
-💡 Interested in:
-
-* 🧪 Software Testing & Quality Assurance
-* 🔐 Cybersecurity
-* 🛡️ SOC & Blue Team Operations
-* 💻 Technology
+Interested in **Software Testing, Quality Assurance, Cybersecurity, and Technology**.
 
 ---
 
-⭐ **This repository is maintained for internship learning, assignment submission, and practical QA experience.**
+⭐ **Learning • Testing • Improving**
