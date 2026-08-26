@@ -85,7 +85,7 @@ New assignments and practical testing work will be added throughout the internsh
 
 **Soumya Kanti Hazra**
 
-🎓 Computer Science & Engineering Student
+🛡️ Aspiring SOC Analyst | Cybersecurity Enthusiast
 
 Interested in **Software Testing, Quality Assurance, Cybersecurity, and Technology**.
 
