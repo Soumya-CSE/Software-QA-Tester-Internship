@@ -1,0 +1,440 @@
+# OrangeHRM Manual Testing – Test Plan
+
+## 1. Document Information
+
+| Field            | Details                  |
+| ---------------- | ------------------------ |
+| Project Name     | OrangeHRM Manual Testing |
+| Project Type     | Manual QA Testing        |
+| Testing Type     | Functional & UI Testing  |
+| Test Environment | Web Browser              |
+| Application      | OrangeHRM                |
+| Prepared By      | Soumya Kanti Hazra       |
+| Version          | 1.0                      |
+| Status           | In Progress              |
+
+---
+
+## 2. Project Objective
+
+The objective of this project is to perform complete manual testing of the OrangeHRM web application and identify functional and UI defects.
+
+The project will cover test planning, test scenario creation, test case preparation, test execution, defect reporting, screenshot evidence, and Requirements Traceability Matrix (RTM).
+
+---
+
+## 3. Scope
+
+### In Scope
+
+The following modules will be tested:
+
+* Login
+* Dashboard
+* Employee Management
+* Employee Search
+* Add Employee
+* Edit Employee
+* Delete Employee
+* Leave Management
+* Logout
+
+### Out of Scope
+
+The following areas are outside the scope of this Week 1 project:
+
+* Performance testing
+* Load testing
+* Security penetration testing
+* API automation
+* Mobile application testing
+* Database testing
+
+---
+
+## 4. Testing Approach
+
+Testing will be performed manually using predefined test cases.
+
+The following testing techniques will be used:
+
+* Functional Testing
+* UI Testing
+* Positive Testing
+* Negative Testing
+* Boundary Value Testing
+* Exploratory Testing
+* Regression Testing
+* Smoke Testing
+
+Test results will be recorded as:
+
+* PASS
+* FAIL
+* BLOCKED
+* NOT EXECUTED
+
+---
+
+## 5. Test Modules
+
+### Login
+
+Verify:
+
+* Valid login
+* Invalid username
+* Invalid password
+* Blank username
+* Blank password
+* Login button
+* Logout functionality
+
+### Dashboard
+
+Verify:
+
+* Dashboard loading
+* Navigation menu
+* Dashboard widgets
+* Page navigation
+
+### Employee Management
+
+Verify:
+
+* Employee list
+* Add employee
+* Edit employee
+* Delete employee
+* Employee information
+* Required fields
+* Employee ID
+* Search functionality
+
+### Leave Management
+
+Verify:
+
+* Leave list
+* Leave request
+* Leave status
+* Leave type
+* Date validation
+
+### Logout
+
+Verify:
+
+* Logout functionality
+* Redirection to login page
+
+---
+
+## 6. Test Environment
+
+| Component          | Environment               |
+| ------------------ | ------------------------- |
+| Operating System   | Windows                   |
+| Browser            | Google Chrome             |
+| Testing Type       | Manual                    |
+| Application        | OrangeHRM Web Application |
+| Test Documentation | Microsoft Excel / Word    |
+| Defect Tracking    | Excel                     |
+| Version Control    | Git / GitHub              |
+
+---
+
+## 7. Test Data
+
+Test data will include:
+
+* Valid username and password
+* Invalid username
+* Invalid password
+* Employee names
+* Employee IDs
+* Employee personal information
+* Leave dates
+* Leave types
+* Invalid and blank input values
+
+Test data will be used only for testing purposes.
+
+---
+
+## 8. Test Case Strategy
+
+More than **30 test cases** will be created.
+
+| Module              | Planned Test Cases |
+| ------------------- | -----------------: |
+| Login               |                  7 |
+| Dashboard           |                  4 |
+| Employee Management |                 10 |
+| Employee Search     |                  4 |
+| Leave Management    |                  5 |
+| Logout              |                  2 |
+| **Total**           |            **32+** |
+
+Each test case will contain:
+
+* Test Case ID
+* Module
+* Test Scenario
+* Preconditions
+* Test Steps
+* Test Data
+* Expected Result
+* Actual Result
+* Status
+* Bug ID
+
+---
+
+## 9. Defect Management
+
+Any unexpected behavior found during test execution will be documented as a defect.
+
+Each defect will contain:
+
+* Bug ID
+* Bug Title
+* Module
+* Severity
+* Priority
+* Preconditions
+* Steps to Reproduce
+* Expected Result
+* Actual Result
+* Status
+* Screenshot
+
+### Severity
+
+| Severity | Description                                        |
+| -------- | -------------------------------------------------- |
+| Critical | Application or major functionality is unusable     |
+| High     | Major functionality is seriously affected          |
+| Medium   | Functionality is affected but workaround may exist |
+| Low      | Minor functional or UI issue                       |
+
+### Priority
+
+| Priority | Description                         |
+| -------- | ----------------------------------- |
+| High     | Fix immediately                     |
+| Medium   | Fix during normal development cycle |
+| Low      | Fix when resources are available    |
+
+---
+
+## 10. Bug Life Cycle
+
+The expected defect workflow is:
+
+```text
+New
+ ↓
+Assigned
+ ↓
+Open
+ ↓
+Fixed
+ ↓
+Retest
+ ↓
+Verified
+ ↓
+Closed
+```
+
+If the defect is still present after retesting:
+
+```text
+Retest
+  ↓
+Failed
+  ↓
+Reopened
+```
+
+---
+
+## 11. Screenshot Evidence
+
+Screenshots will be captured for confirmed defects and important test execution evidence.
+
+Example:
+
+```text
+Screenshots/
+├── BUG-ORH-001.png
+├── BUG-ORH-002.png
+├── BUG-ORH-003.png
+└── ...
+```
+
+Each screenshot will be linked to its corresponding Bug ID.
+
+---
+
+## 12. Requirements Traceability Matrix
+
+The RTM will establish a relationship between requirements, test cases, execution results, and defects.
+
+```text
+Requirement
+     ↓
+Test Case
+     ↓
+Test Execution
+     ↓
+PASS / FAIL
+     ↓
+Bug ID
+```
+
+Example:
+
+| Requirement ID | Requirement                             | Test Case ID | Status | Bug ID      |
+| -------------- | --------------------------------------- | ------------ | ------ | ----------- |
+| ORH-REQ-001    | User should be able to login            | TC-LOGIN-001 | PASS   | —           |
+| ORH-REQ-002    | Admin should be able to add employee    | TC-EMP-001   | PASS   | —           |
+| ORH-REQ-003    | Admin should be able to search employee | TC-EMP-002   | FAIL   | BUG-ORH-001 |
+
+---
+
+## 13. Entry Criteria
+
+Testing will begin when:
+
+* Application is accessible.
+* Test environment is available.
+* Test requirements are identified.
+* Test scenarios are prepared.
+* Test data is available.
+* Required browser is installed.
+
+---
+
+## 14. Exit Criteria
+
+Testing will be considered complete when:
+
+* All planned test cases have been executed.
+* Major test scenarios have been covered.
+* All identified defects have been documented.
+* Screenshots have been attached where required.
+* RTM has been updated.
+* Test results have been reviewed.
+
+---
+
+## 15. Risks and Assumptions
+
+### Risks
+
+* Demo application may be unavailable.
+* Application data may change during testing.
+* Some features may not be available in the demo environment.
+* Browser compatibility may affect results.
+* Test execution may be affected by network issues.
+
+### Assumptions
+
+* The application is accessible during testing.
+* Test credentials are available.
+* Required modules are available in the selected environment.
+* Testing is performed using a supported web browser.
+
+---
+
+## 16. Deliverables
+
+The following documents will be produced:
+
+```text
+Test Plan
+Test Scenarios
+30+ Test Cases
+Test Execution Report
+Bug Reports
+Bug Screenshots
+Requirements Traceability Matrix
+Test Summary
+```
+
+---
+
+## 17. Project Folder Structure
+
+```text
+05-OrangeHRM-Mini-Project/
+│
+├── README.md
+│
+├── Test-Plan/
+│   └── OrangeHRM_Test_Plan.docx
+│
+├── Test-Scenarios/
+│   └── OrangeHRM_Test_Scenarios.xlsx
+│
+├── Test-Cases/
+│   └── OrangeHRM_Test_Cases.xlsx
+│
+├── Test-Execution/
+│   └── OrangeHRM_Test_Execution.xlsx
+│
+├── Bug-Reports/
+│   └── OrangeHRM_Bug_Reports.xlsx
+│
+├── Screenshots/
+│   ├── BUG-ORH-001.png
+│   ├── BUG-ORH-002.png
+│   └── ...
+│
+└── RTM/
+    └── OrangeHRM_RTM.xlsx
+```
+
+---
+
+## 18. Testing Workflow
+
+```text
+Requirement Analysis
+        ↓
+Test Planning
+        ↓
+Test Scenario Creation
+        ↓
+Test Case Design
+        ↓
+Test Execution
+        ↓
+Pass / Fail
+        ↓
+Defect Reporting
+        ↓
+Screenshot Evidence
+        ↓
+Retesting
+        ↓
+RTM Update
+        ↓
+Test Summary
+```
+
+## 19. Project Status
+
+**In Progress**
+
+The project will be updated as test cases are executed and defects are identified.
+
+## 20. Tester
+
+**Soumya Kanti Hazra**
+
+Computer Science & Engineering
+Manual QA Testing / Software Testing
