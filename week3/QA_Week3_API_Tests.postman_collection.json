@@ -1,0 +1,205 @@
+{
+  "info": {
+    "name": "QA Week3 API Tests - reqres.in",
+    "_postman_id": "b2f3c1e0-6a4d-4f2e-9c3a-week3apitests",
+    "description": "Week 3 mini project - 5 REST API tests (GET, POST, PUT, DELETE) against the public reqres.in test API. Each request has automated Postman test scripts asserting status code and response body.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET - List Users (page 2)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/users?page=2",
+          "host": ["{{base_url}}"],
+          "path": ["api", "users"],
+          "query": [{ "key": "page", "value": "2" }]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status code is 200', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "pm.test('Response has data array', function () {",
+              "    const json = pm.response.json();",
+              "    pm.expect(json.data).to.be.an('array');",
+              "    pm.expect(json.data.length).to.be.above(0);",
+              "});",
+              "",
+              "pm.test('Page number matches request', function () {",
+              "    const json = pm.response.json();",
+              "    pm.expect(json.page).to.eql(2);",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "GET - Single User (id=2)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/users/2",
+          "host": ["{{base_url}}"],
+          "path": ["api", "users", "2"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status code is 200', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "pm.test('User id matches requested id', function () {",
+              "    const json = pm.response.json();",
+              "    pm.expect(json.data.id).to.eql(2);",
+              "});",
+              "",
+              "pm.test('User has email field', function () {",
+              "    const json = pm.response.json();",
+              "    pm.expect(json.data).to.have.property('email');",
+              "});",
+              "",
+              "pm.test('Response time is acceptable', function () {",
+              "    pm.expect(pm.response.responseTime).to.be.below(3000);",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "POST - Create User",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Soumya Hazra\",\n  \"job\": \"QA Tester\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/users",
+          "host": ["{{base_url}}"],
+          "path": ["api", "users"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status code is 201', function () {",
+              "    pm.response.to.have.status(201);",
+              "});",
+              "",
+              "pm.test('Response has generated id and createdAt', function () {",
+              "    const json = pm.response.json();",
+              "    pm.expect(json).to.have.property('id');",
+              "    pm.expect(json).to.have.property('createdAt');",
+              "});",
+              "",
+              "pm.test('Name and job echoed back correctly', function () {",
+              "    const json = pm.response.json();",
+              "    pm.expect(json.name).to.eql('Soumya Hazra');",
+              "    pm.expect(json.job).to.eql('QA Tester');",
+              "});",
+              "",
+              "pm.collectionVariables.set('created_user_id', pm.response.json().id);"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "PUT - Update User",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Soumya Hazra\",\n  \"job\": \"Senior QA Tester\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/api/users/2",
+          "host": ["{{base_url}}"],
+          "path": ["api", "users", "2"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status code is 200', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "pm.test('Job field updated correctly', function () {",
+              "    const json = pm.response.json();",
+              "    pm.expect(json.job).to.eql('Senior QA Tester');",
+              "});",
+              "",
+              "pm.test('Response has updatedAt timestamp', function () {",
+              "    const json = pm.response.json();",
+              "    pm.expect(json).to.have.property('updatedAt');",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "DELETE - Remove User",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/users/2",
+          "host": ["{{base_url}}"],
+          "path": ["api", "users", "2"]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test('Status code is 204 (No Content)', function () {",
+              "    pm.response.to.have.status(204);",
+              "});",
+              "",
+              "pm.test('Response body is empty', function () {",
+              "    pm.expect(pm.response.text()).to.eql('');",
+              "});"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    { "key": "base_url", "value": "https://reqres.in" },
+    { "key": "created_user_id", "value": "" }
+  ]
+}
