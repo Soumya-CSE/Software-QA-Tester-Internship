@@ -1,0 +1,188 @@
+{
+  "info": {
+    "name": "QA Portfolio - API Test Suite (ReqRes)",
+    "_postman_id": "b6f2a4b0-11e1-4e3e-9d2a-qaportfolio001",
+    "description": "5 API test scenarios validating CRUD behavior, status codes, response schema and negative cases against the ReqRes public test API (https://reqres.in).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "https://reqres.in/api" }
+  ],
+  "item": [
+    {
+      "name": "API-01 | GET /users/2 - Fetch single user (200)",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "x-api-key", "value": "reqres-free-v1" }],
+        "url": { "raw": "{{baseUrl}}/users/2", "host": ["{{baseUrl}}"], "path": ["users", "2"] }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code is 200', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "pm.test('Response has user data object', function () {",
+              "    const json = pm.response.json();",
+              "    pm.expect(json).to.have.property('data');",
+              "    pm.expect(json.data).to.have.property('id', 2);",
+              "});",
+              "",
+              "pm.test('User email is well-formed', function () {",
+              "    const json = pm.response.json();",
+              "    pm.expect(json.data.email).to.match(/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/);",
+              "});",
+              "",
+              "pm.test('Response time is under 1000ms', function () {",
+              "    pm.expect(pm.response.responseTime).to.be.below(1000);",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "API-02 | GET /users/23 - Fetch non-existent user (404)",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "x-api-key", "value": "reqres-free-v1" }],
+        "url": { "raw": "{{baseUrl}}/users/23", "host": ["{{baseUrl}}"], "path": ["users", "23"] }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code is 404 for non-existent user', function () {",
+              "    pm.response.to.have.status(404);",
+              "});",
+              "",
+              "pm.test('Response body is an empty object', function () {",
+              "    const json = pm.response.json();",
+              "    pm.expect(Object.keys(json).length).to.eql(0);",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "API-03 | POST /users - Create user (201)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "x-api-key", "value": "reqres-free-v1" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Soumya Kanti Hazra\",\n  \"job\": \"SOC Analyst - QA Tester\"\n}"
+        },
+        "url": { "raw": "{{baseUrl}}/users", "host": ["{{baseUrl}}"], "path": ["users"] }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code is 201 Created', function () {",
+              "    pm.response.to.have.status(201);",
+              "});",
+              "",
+              "pm.test('Response echoes submitted name and job', function () {",
+              "    const json = pm.response.json();",
+              "    pm.expect(json.name).to.eql('Soumya Kanti Hazra');",
+              "    pm.expect(json.job).to.eql('SOC Analyst - QA Tester');",
+              "});",
+              "",
+              "pm.test('Response contains generated id and createdAt', function () {",
+              "    const json = pm.response.json();",
+              "    pm.expect(json).to.have.property('id');",
+              "    pm.expect(json).to.have.property('createdAt');",
+              "});",
+              "",
+              "pm.collectionVariables.set('createdUserId', pm.response.json().id);"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "API-04 | PUT /users/2 - Update user (200)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "x-api-key", "value": "reqres-free-v1" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Soumya Kanti Hazra\",\n  \"job\": \"Senior SOC Analyst\"\n}"
+        },
+        "url": { "raw": "{{baseUrl}}/users/2", "host": ["{{baseUrl}}"], "path": ["users", "2"] }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code is 200', function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "pm.test('Job field is updated correctly', function () {",
+              "    const json = pm.response.json();",
+              "    pm.expect(json.job).to.eql('Senior SOC Analyst');",
+              "});",
+              "",
+              "pm.test('updatedAt timestamp is present', function () {",
+              "    const json = pm.response.json();",
+              "    pm.expect(json).to.have.property('updatedAt');",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    },
+    {
+      "name": "API-05 | POST /login - Missing password (400)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "x-api-key", "value": "reqres-free-v1" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"eve.holt@reqres.in\"\n}"
+        },
+        "url": { "raw": "{{baseUrl}}/login", "host": ["{{baseUrl}}"], "path": ["login"] }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status code is 400 for missing password', function () {",
+              "    pm.response.to.have.status(400);",
+              "});",
+              "",
+              "pm.test('Error message indicates missing password', function () {",
+              "    const json = pm.response.json();",
+              "    pm.expect(json.error.toLowerCase()).to.include('password');",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ]
+    }
+  ]
+}
