@@ -32,32 +32,6 @@ QA Tester study materials and hands-on practice for Week 4, covering performance
 4. Perform load testing with JMeter (100 users)
 5. Compile everything into a professional QA portfolio
 
-## 📁 Suggested Repo Structure
-
-```
-week-4/
-├── README.md
-├── jmeter/
-│   ├── load-test-plan.jmx
-│   ├── stress-test-100-users.jmx
-│   └── results/
-│       ├── summary-report.html
-│       └── aggregate-report.csv
-├── ci-cd/
-│   ├── .github/workflows/run-tests.yml
-│   └── ci-setup-notes.md
-├── major-project/
-│   ├── test-plan.md
-│   ├── test-strategy.md
-│   ├── test-cases.xlsx
-│   ├── selenium/
-│   │   └── (15 automated scenario scripts)
-│   ├── postman/
-│   │   └── api-tests.postman_collection.json
-│   ├── jmeter/
-│   │   └── load-test-100-users.jmx
-│   └── qa-portfolio.pdf
-```
 
 ## 🛠 Tools Used
 
