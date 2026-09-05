@@ -29,24 +29,6 @@ QA Tester study materials and hands-on practice for Week 3, covering Selenium We
 2. Test 5 APIs with Postman
 3. Export the Postman collection
 
-## 📁 Suggested Repo Structure
-
-```
-week-3/
-├── README.md
-├── selenium/
-│   ├── login_test.py
-│   ├── form_validation_tests/
-│   └── mini-project/
-│       ├── test_login.py
-│       ├── test_search.py
-│       ├── test_add_to_cart.py
-│       └── test_checkout.py
-├── postman/
-│   ├── api-tests.postman_collection.json
-│   ├── environment.postman_environment.json
-│   └── mini-project-collection.postman_collection.json
-```
 
 ## 🛠 Tools Used
 
