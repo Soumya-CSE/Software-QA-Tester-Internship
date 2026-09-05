@@ -29,22 +29,6 @@ QA Tester study materials and hands-on practice for Week 2, covering test strate
 3. Track bug lifecycle from **Open → Closed**
 4. Generate a test summary report
 
-## 📁 Suggested Repo Structure
-
-```
-week-2/
-├── README.md
-├── test-strategy/
-│   └── mobile-banking-app-test-strategy.md
-├── bva-eqp/
-│   └── boundary-value-analysis-notes.md
-├── regression/
-│   └── regression-test-cases.md
-├── mini-project/
-│   ├── test-plan.md
-│   ├── bug-log.csv
-│   └── test-summary-report.md
-```
 
 ## 🛠 Tools Used
 
