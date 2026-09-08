@@ -78,9 +78,7 @@ By the end of Week 2, the following should be completed:
 
 * ✅ 10 Jira Bug Reports
 * ✅ Mobile Banking Test Strategy
-* ✅ BVA Practice — 3 Input Fields
 * ✅ Equivalence Partitioning Practice
-* ✅ Regression Test Cases
 * ✅ E-Commerce Test Plan
 * ✅ 15+ E-Commerce Bugs
 * ✅ Bug Life Cycle Tracking
