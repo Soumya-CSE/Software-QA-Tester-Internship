@@ -75,7 +75,7 @@ This repository may include:
 
 ## 📈 Internship Status
 
-🟢 **Ongoing**
+🟢 **Complete**
 
 New assignments and practical testing work will be added throughout the internship.
 
