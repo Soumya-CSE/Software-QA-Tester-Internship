@@ -428,7 +428,7 @@ Test Summary
 
 ## 19. Project Status
 
-**In Progress**
+**complete**
 
 The project will be updated as test cases are executed and defects are identified.
 
