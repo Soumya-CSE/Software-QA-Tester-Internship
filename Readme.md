@@ -77,7 +77,7 @@ This repository may include:
 
 🟢 **Complete**
 
-New assignments and practical testing work will be added throughout the internship.
+
 
 ---
 
