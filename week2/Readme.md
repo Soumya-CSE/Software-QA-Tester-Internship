@@ -21,7 +21,6 @@ Understanding how to design an effective test strategy, identify and document de
 * [ ] Set up a Jira project and create **10 detailed bug reports**
 * [ ] Create a **Test Strategy Document** for a mobile banking application
 * [ ] Practice **Boundary Value Analysis** on 3 different input fields
-* [ ] Practice **Equivalence Partitioning** on selected input fields
 * [ ] Write **regression test cases** for a feature after a bug fix
 * [ ] Execute retesting and update the corresponding bug status in Jira
 
@@ -37,7 +36,6 @@ Complete the following activities:
 4. Track defects through the complete life cycle:
    **New → Open → In Progress → Fixed → Retest → Closed**
 5. Reopen defects that fail during retesting
-6. Execute regression testing after bug fixes
 7. Prepare a professional **Test Summary Report**
 
 ## 🛠️ TOOLS & TECHNOLOGIES
