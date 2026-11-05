@@ -1,6 +1,6 @@
 # 🧪 Software QA Tester Internship
 
-This repository contains my **assignments, test cases, bug reports, testing tasks, and practical work** completed during my **Software QA Tester Internship**.
+This repository contains my assignments, test cases, bug reports, testing tasks, and practical work completed during my **Software QA Tester Internship**.
 
 > 🎯 **Purpose:** Internship assignment submission and practical learning in Software Quality Assurance and Testing.
 
@@ -76,8 +76,6 @@ This repository may include:
 ## 📈 Internship Status
 
 🟢 **Complete**
-
-
 
 ---
 
