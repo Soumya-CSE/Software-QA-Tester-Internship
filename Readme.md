@@ -88,5 +88,3 @@ This repository may include:
 Interested in **Software Testing, Quality Assurance, Cybersecurity, and Technology**.
 
 ---
-
-⭐ **Learning • Testing • Improving**
