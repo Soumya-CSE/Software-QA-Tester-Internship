@@ -9,8 +9,6 @@ QA Tester study materials and hands-on practice for Week 4, covering performance
 - CI/CD pipeline basics & test integration
 - QA best practices, metrics & career preparation
 
-📥 [Download Week 4 Materials](https://www.skillnexis.in/study_materials/qa-tester/week%204.zip)
-
 ## 🎯 Topic Focus
 
 **Performance & CI/CD Integration**
