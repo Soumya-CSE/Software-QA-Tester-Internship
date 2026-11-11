@@ -10,7 +10,6 @@ QA Tester study materials and hands-on practice for **Week 3**, focusing on **Se
 * WebDriver Waits — Implicit, Explicit & Expected Conditions
 * API Testing with **Postman**
 * REST API Methods — **GET, POST, PUT & DELETE**
-* API Response Validation — Status Codes, Headers & Response Body
 
 ## 🎯 TOPIC FOCUS
 
@@ -113,7 +112,6 @@ By the end of Week 3, the following should be completed:
 * ✅ 5 Form Validation Automation Scripts
 * ✅ 10 End-to-End Automated Test Scenarios
 * ✅ Selenium Locator Practice
-* ✅ Explicit Wait Implementation
 * ✅ 5 API Test Cases
 * ✅ Postman Collection
 * ✅ Postman Environment Variables
